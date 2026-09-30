@@ -19,6 +19,12 @@ const UseStateScreen = () => {
     color: 'red',
   } );
 
+  const [ count, setCount ] = useState( 0 );
+
+  const increaseCount = () => {
+    setCount( count => count + 1 );
+  }
+
   // Derived from state, so it can never get out of sync
   const isBlue = car.color === 'blue';
 
@@ -34,12 +40,20 @@ const UseStateScreen = () => {
       <Stack.Screen
         options={{ headerShown: true, title: 'useStateHook', headerBackTitle: 'Back' }}
       />
+
       <View style={styles.container}>
         <Text style={[ styles.header, { color: colors.text } ]}>
           I have a {car.color} new {car.brand} {car.model}
         </Text>
         <Pressable style={styles.buttonPress} onPress={changeColor}>
           <Text style={styles.buttonText}>{isBlue ? 'Red' : 'Blue'}</Text>
+        </Pressable>
+      </View>
+
+      <View style={styles.container}>
+        <Text style={[ styles.header, { borderColor: colors.text } ]}> Count: {count}</Text>
+        <Pressable style={[styles.buttonPress, {borderColor: 'red', borderWidth: 2,}]} onPress={increaseCount}>
+          <Text style={styles.buttonText}>Increase</Text>
         </Pressable>
       </View>
     </View>
