@@ -12,8 +12,11 @@ export default function Index() {
 
         <View style={styles.hookView} >
           <Text style={styles.textStyle}> Various Hooks: </Text>
-          <TouchableOpacity style={styles.customBtn} onPress={() => router.push('/screens/useStateScreen')}>
+          <TouchableOpacity style={styles.customBtn} onPress={() => router.push('/useStateScreen')}>
             <Text style={[styles.textStyle, styles.buttonText]}>useState</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.customBtn} onPress={() => router.push('/useEffectScreen')}>
+            <Text style={[styles.textStyle, styles.buttonText]}>useEffect</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
