@@ -16,11 +16,9 @@ export default DetailsScreen;
 
 const styles = StyleSheet.create( {
     container: {
-        flex: 1,
-        paddingHorizontal: 4
+        paddingHorizontal: 5
     },
     header: {
-        flex: 1,
         fontWeight: '600',
         fontSize: 30,
     },

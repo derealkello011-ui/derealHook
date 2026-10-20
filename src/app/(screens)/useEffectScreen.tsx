@@ -9,7 +9,7 @@ const UseEffectScreen = () => {
     setTimeout( () => {
       setCount( count => count + 1 );
     }, 2000)
-  })
+  }, [count])
   return (
     <View style={[ styles.screen, { backgroundColor: colors.background } ]}>
       <Stack.Screen

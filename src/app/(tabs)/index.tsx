@@ -12,12 +12,19 @@ export default function Index() {
 
         <View style={styles.hookView} >
           <Text style={styles.textStyle}> Various Hooks: </Text>
+
           <TouchableOpacity style={styles.customBtn} onPress={() => router.push('/useStateScreen')}>
             <Text style={[styles.textStyle, styles.buttonText]}>useState</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={styles.customBtn} onPress={() => router.push('/useEffectScreen')}>
             <Text style={[styles.textStyle, styles.buttonText]}>useEffect</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity style={styles.customBtn} onPress={() => router.push('/useRefScreen')}>
+            <Text style={[styles.textStyle, styles.buttonText]}>useRef</Text>
+          </TouchableOpacity>
+          
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -51,7 +58,8 @@ const styles = StyleSheet.create({
   customBtn: {
     marginVertical: 10,
     backgroundColor: '#4e4bfaf8',
-    borderRadius: 12
+    borderRadius: 12,
+    paddingHorizontal: 10,
 
   },
   buttonText: {
